@@ -1,30 +1,34 @@
 # 🛠️ MLOps Engineer
 
-Core Focus Areas
+> Production-grade machine learning pipelines focused on zero-downtime deployment, lineage tracking, scalable serving, and drift-aware observability.
 
-    Pipeline Automation (CI/CD/CT): Building zero-downtime pipelines that automate continuous training (CT), model packaging, and canary/shadow deployments upon code changes or detected data drift.
+---
 
-    Reproducibility & Lineage: Ensuring full end-to-end reproducibility of experiments and deployments via data versioning, model registries, and artifact/parameter tracking.
+## 🎯 Core Focus Areas
 
-    Scalable Serving: Optimizing latency and throughput using distributed serving engines, dynamic autoscaling, and maximized GPU resource utilization.
+* **Pipeline Automation (CI/CD/CT)**: Builds zero-downtime pipelines automating Continuous Training (CT), model packaging, and canary/shadow deployments triggered by Git commits or detected data drift.
+* **Reproducibility & Lineage**: Guarantees end-to-end auditability across datasets, parameters, and compiled model weights using declarative versioning and centralized registries.
+* **Scalable Serving**: Optimizes inference latency and throughput via distributed execution runtimes, dynamic auto-scaling policies, and hardware resource efficiency.
+* **Observability & Reliability**: Safeguards inference pipelines against performance degradation through real-time drift detection (data & concept) and systems metric telemetry.
 
-    Observability & Reliability: Preventing model performance degradation through real-time monitoring of data drift, concept drift, and system hardware metrics.
+---
 
-💻 Tech Stack
-Domain Technologies 
-FrameworksPipeline - Orchestration Airflow
-Tracking & Registry - MLflow 
-Serving & Inference FastAPI
-Infra & Containerization - Docker
-Monitoring & Logging - Prometheus, Grafana, Evidently AI
-Languages & ML Frameworks - Python, Bash, PyTorch, Scikit-learn, Ray
+## 💻 Tech Stack
 
-🏗️ Architecture & Philosophy
+| Domain | Technologies |
+| :--- | :--- |
+| **Pipeline & Orchestration** | Apache Airflow |
+| **Experiment Tracking & Registry** | MLflow |
+| **Model Serving & Inference** | FastAPI |
+| **Infra & Containerization** | Docker |
+| **Observability & Monitoring** | Prometheus, Grafana, Evidently AI |
+| **Languages & ML Frameworks** | Python, Bash, PyTorch, Scikit-learn, Ray |
 
-    Decoupled Architecture: Separating model training, orchestration, and inference layers to maintain modularity, fault tolerance, and independent scalability.
+---
 
-    Immutable Artifacts & Strict Lineage: Treating every dataset, hyperparameter set, and compiled model weight as an immutable entity to guarantee auditability and deterministic rollbacks.
+## 🏗️ Architecture & Philosophy
 
-    Continuous Validation (Data & Model): Integrating automated data validation (e.g., schema checks, distribution baselines) and model regression testing prior to production gating.
-
-    Resilient Production Serving: Prioritizing low-latency execution and high availability through blue-green/canary rollout strategies and automated fallback mechanisms.
+* **Decoupled Architecture**: Training workflows, orchestration engines, and real-time serving clusters operate independently to isolate faults and enable horizontal autoscaling.
+* **Immutable Artifacts & Strict Lineage**: Every dataset snapshot, training configuration, and compiled binary is treated as an immutable state for deterministic rollback guarantees.
+* **Continuous Validation (Data & Model)**: Schema constraints, distribution baseline checks, and performance regression gates are enforced prior to production promotion.
+* **Resilient Production Serving**: Minimizes API latency and maximizes uptime via progressive rollouts (canary/shadow deployments) and automated fallback mechanisms.
